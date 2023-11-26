@@ -138,7 +138,7 @@ public class Main {
 				
 		}catch (Exception e) {
 			
-			System.out.println("Errore di connessione: " + e.getMessage());
+			System.out.println("Errore in db: " + e.getMessage());
 		}
 			   
 	
