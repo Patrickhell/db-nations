@@ -34,9 +34,9 @@ public class Main {
 				    + "ORDER BY countries.name;";
 
 			
-			try(PreparedStatement ps = con.prepareStatement(sql)) {
+			PreparedStatement ps = con.prepareStatement(sql);
 				
-				try(ResultSet rs = ps.executeQuery()) {
+			    ResultSet rs = ps.executeQuery();
 					
 					while(rs.next()) {
 						
@@ -50,10 +50,8 @@ public class Main {
 					}
 					
 					System.out.println("\n-----------------------------------------\n");
-				}
-			}
-			
-		}catch (Exception e) {
+					
+			} catch (Exception e) {
 			
 			System.out.println("Error in db: " + e.getMessage());
 		}
@@ -64,7 +62,7 @@ public class Main {
 	private static void millestone2Bonus() {
 		
 		Scanner sc = new Scanner(System.in);
-		System.out.print("Cerca: ");
+		System.out.print("Search: ");
 		
 		String parola = sc.nextLine().toLowerCase();
 		
